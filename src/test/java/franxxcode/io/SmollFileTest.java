@@ -17,4 +17,15 @@ public class SmollFileTest {
         Path path = Files.writeString(Path.of("smol2"), "Hello String");
         Assertions.assertTrue(Files.exists(path));
     }
+
+    @Test
+    void readSmollFile() throws IOException {
+
+        byte[] smol1 = Files.readAllBytes(Path.of("smol1"));
+        Assertions.assertEquals("HelloWorld", new String(smol1));
+
+        String smol2 = Files.readString(Path.of("smol2"));
+        Assertions.assertEquals("Hello String", smol2);
+
+    }
 }
