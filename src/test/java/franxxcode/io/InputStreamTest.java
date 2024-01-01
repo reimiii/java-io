@@ -48,7 +48,7 @@ public class InputStreamTest {
                 counter += 1;
             }
 
-            System.out.println(builder.toString());
+            System.out.println(builder);
             System.out.println(counter);
 
         } catch (IOException e) {
